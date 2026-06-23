@@ -18,7 +18,7 @@ public class HelloController {
         return "<h1>Hello World</h1>";
     }
 
-    // http://localhost:9090/getPath/Rahul/30
+    // http://localhost:9090/getPath/Sikandar/28
     @GetMapping("getPath/{name}/{age}")
     public String getPath(@PathVariable String name, @PathVariable Integer age){
         return "Hello " + name + ", Age: " + age;
@@ -49,6 +49,12 @@ public class HelloController {
             --data '{"name":"Sikandar","age":28}'*/
     @PostMapping("postDataRaw")
     public String postDataRaw(@RequestBody Map<String, Object> data){
+        if (!data.containsKey("name")) {
+            return "name is missing";
+        }
+        if (!data.containsKey("age")) {
+            return "age is missing";
+        }
         String name = (String) data.get("name");
         Integer age = (Integer) data.get("age");
         return "Hello " + name + ", Age: " + age;
