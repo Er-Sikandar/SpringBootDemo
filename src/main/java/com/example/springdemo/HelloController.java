@@ -9,9 +9,11 @@ public class HelloController {
     public String hello(){
         return "Hello World";
     }
+
     @GetMapping("helloHtml")
     public String helloHtml(){
-        return "<b>Hello World</b>";
+        return "<h1>Hello World</h1>";
     }
+
 
 }
