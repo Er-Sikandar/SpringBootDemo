@@ -57,6 +57,9 @@ public class HelloController {
         }
         String name = (String) data.get("name");
         Integer age = (Integer) data.get("age");
+        if (name == null || name.isEmpty()) {
+            return "name is empty";
+        }
         return "Hello " + name + ", Age: " + age;
     }
 
