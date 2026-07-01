@@ -7,7 +7,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.util.Map;
 
 @RestController
-public class HelloController {
+public class ApisController {
     @GetMapping("hello")
     public String hello(){
         return "Hello World";

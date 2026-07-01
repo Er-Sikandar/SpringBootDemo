@@ -9,8 +9,8 @@ public class SpringDemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringDemoApplication.class, args);
 
-		/*HelloController helloController=new HelloController();
-		String str=helloController.hello();
+		/*ApisController apiController=new ApisController();
+		String str=apiController.hello();
 		System.out.println(str);*/
 	}
 
